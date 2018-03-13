@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/helloworld.unity
+  isLoaded: 1
+  isActive: 1
