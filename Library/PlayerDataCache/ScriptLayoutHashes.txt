@@ -1,6 +1,7 @@
 Metro
 SceneListBegin?
 Assets/helloworld.unity
+Assets/level1-mouth.unity
 SceneListEnd?
 7abde016883951c4ca4e7c44ce6adb2c Assembly-CSharp.dll:HoloToolkit.Unity.SceneLauncher
 c435bd06b74bbebac563a6d81dae369c Assembly-CSharp.dll:HoloToolkit.Unity.CanvasHelper
@@ -150,6 +151,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.Tests.TapResponder
 98084531bd8a843e71c0cc23d5715994 Assembly-CSharp.dll:HoloToolkit.Unity.UAudioManager
 8f58a5afc906d3cd31a7c7e94317cc54 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.MixedRealityTeleport
 ba66ed51a66e14863f51781e69c657ef Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.KeyboardValueKey
@@ -182,6 +184,7 @@ e1aa8fa2d37d6483e8f5f4ef15c12072 Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.A
 d2f5a7716b4289ae5a1527a76e916505 Assembly-CSharp.dll:HoloToolkit.Unity.SortingLayerOverride
 1ffcf79b2faeecabecd3aed35f004a71 Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.CompoundButtonText
 7c89456c5bee66ad1a98ab2c91d6339e Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.Examples.Grabbables.Grabber
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.nextscene
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.KeyboardManager
 dfa416d091c6a74c4e4ef8229469c6ec Assembly-CSharp.dll:HoloToolkit.Sharing.VoiceChat.MicrophoneTransmitter
 b39fddbe4ede4fafe2e1641885144305 Assembly-CSharp.dll:HoloToolkit.Sharing.SharingWorldAnchorManager
@@ -325,5 +328,3 @@ ecc14250990e8ffd4a0bb635da7c50c3 Assembly-CSharp.dll:HoloToolkit.Unity.AtlasPref
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LineBaseEditor
 aa573da5178a98cdf7ef39d22614bb9b Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.CompoundButton
 9a0abb9f7109ec47e2c7bfd5d401ded8 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.Examples.Grabbables.GrabbableSimple
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.nextscene
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.Tests.TapResponder
