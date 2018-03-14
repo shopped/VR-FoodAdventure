@@ -290,6 +290,7 @@
     <Compile Include="Assets\Bobbing.cs" />
     <Compile Include="Assets\Changer.cs" />
     <Compile Include="Assets\CheckY.cs" />
+    <Compile Include="Assets\Delay.cs" />
     <Compile Include="Assets\dontdestroy.cs" />
     <Compile Include="Assets\FlipNormals.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\BoundaryManager.cs" />

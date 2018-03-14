@@ -101,6 +101,29 @@ public class LevelThree : MonoBehaviour {
     {
         if (index < 14)
         {
+            if (index == 1)
+            {
+                GameObject.Find("Voice 017").GetComponent<AudioSource>().Play();
+            } else if (index == 2)
+            {
+                GameObject.Find("Voice 018").GetComponent<AudioSource>().Play();
+            }
+            else if (index == 4)
+            {
+                GameObject.Find("Voice 019").GetComponent<AudioSource>().Play();
+            }
+            else if (index == 6)
+            {
+                GameObject.Find("Voice 020").GetComponent<AudioSource>().Play();
+            }
+            else if (index == 8)
+            {
+                GameObject.Find("Voice 021").GetComponent<AudioSource>().Play();
+            }
+            else if (index == 11)
+            {
+                GameObject.Find("Voice 022").GetComponent<AudioSource>().Play();
+            }
             var theText = new GameObject();
             int x = rnd.Next(-2, 2);
             int y = rnd.Next(0, 2);

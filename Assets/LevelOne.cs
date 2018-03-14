@@ -9,6 +9,7 @@ public class LevelOne : MonoBehaviour {
     int level;
     bool nutrient;
     int count;
+    int initialtimer = 1000;
     public Transform Player;
     public GameObject molecule;
     private String[] mols = {"carbohydrate", "fat", "fiber", "protein", "watersm"};
@@ -33,9 +34,11 @@ public class LevelOne : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        GameObject.Find("Voice 006").GetComponent<AudioSource>().Play();
         nutrient = false;
         level = 1;
         count = 0;
+        initialtimer = 1500;
         molecule = null;
         GameObject.Find("watersm2").GetComponent<Renderer>().enabled = false;
         GameObject.Find("watersm3").GetComponent<Renderer>().enabled = false;
@@ -50,18 +53,7 @@ public class LevelOne : MonoBehaviour {
         }
         ShowChildren("Apple");
     }
-
-    private void Update()
-    {
-        if (level == 1)
-        {
-            UpdateLevelOne();
-        } else if (level == 2)
-        {
-            UpdateLevelTwo();
-        }
-    }
-
+    
     IEnumerator LoadYourAsyncScene(string name)
     {
         // The Application loads the Scene in the background at the same time as the current Scene.
@@ -74,16 +66,42 @@ public class LevelOne : MonoBehaviour {
             yield return null;
         }
     }
-
-    //level two
-
+    
     // Update is called once per frame
-    void UpdateLevelOne () {
+    void Update () {
         bool chewing = GameObject.Find("JawController").GetComponent<CheckY>().chewing;
         bool close = GameObject.Find("Hand").GetComponent<BackandforthScript>().close;
+        
+        if (initialtimer > 1)
+        {
+            initialtimer--;
+            if (initialtimer == 0)
+            {
+                Debug.Log("hi");
+                GameObject.Find("Voice 006").GetComponent<AudioSource>().Play();
+            }
+        }
         // No nutrients. Food is close. Player is chewing. Not done with the level
         if (!nutrient && close && chewing && count != 5) {
-                nutrient = true;
+            if (count == 0)
+            {
+                GameObject.Find("Voice 009").GetComponent<AudioSource>().Play();
+            } else if (count == 1)
+            {
+                GameObject.Find("Voice 008").GetComponent<AudioSource>().Play();
+            } else if (count == 2)
+            {
+                GameObject.Find("Voice 010").GetComponent<AudioSource>().Play();
+            }
+            else if (count == 3)
+            {
+                GameObject.Find("Voice 011").GetComponent<AudioSource>().Play();
+            }
+            else if (count == 4)
+            {
+                GameObject.Find("Voice 012").GetComponent<AudioSource>().Play();
+            }
+            nutrient = true;
                 HideChildren(foods[count]);
                 GameObject.Find("Hand").GetComponent<BackandforthScript>().toggleMove();
                 molecule = GameObject.Find(mols[count]);
@@ -124,72 +142,14 @@ public class LevelOne : MonoBehaviour {
             GameObject.Find("Saliva").GetComponent<Renderer>().enabled = false;
         }
         // Next Level Logic
-        //if (Player.position.z < -4 && count >= 4)
-        if (count == 0)
+        if (Player.position.z < -4 && count >= 4)
         {
-            leveltwo();
             Debug.Log("Should start the next scene now!!!!!!!!!!!!!");
             StartCoroutine(LoadYourAsyncScene("level2-stomach"));
         }
         Debug.Log(count);
     }
-
-    private bool unblocked;
-    private bool istalking;
-    private bool iswhispering;
-    private int talktime;
-    private int sinktimer;
-
-    // Use this for initialization
-    void leveltwo()
-    {
-        unblocked = false;
-        talktime = 0;
-        sinktimer = 0;
-
-        talk(1000, false);
-    }
-
-    public void unblock()
-    {
-        GameObject.Find("Bile").GetComponent<Renderer>().enabled = true;
-        unblocked = true;
-    }
-
-    public void proceed()
-    {
-        if (unblocked == true)
-        {
-            StartCoroutine(LoadYourAsyncScene("level3-small"));
-        }
-    }
-
-    // Update is called once per frame
-    void UpdateLevelTwo()
-    {
-        if (talktime > 0)
-        {
-            talktime--;
-            if (talktime == 0)
-            {
-                GameObject.Find("talking").GetComponent<Renderer>().enabled = false;
-                GameObject.Find("whispering").GetComponent<Renderer>().enabled = false;
-            }
-        }
-        if (unblocked)
-        {
-            if (sinktimer < 5000)
-            {
-                sinktimer++;
-                Renderer[] lChildRenderers = GameObject.Find("FatSurface").GetComponentsInChildren<Renderer>();
-                foreach (Renderer lRenderer in lChildRenderers)
-                {
-                    lRenderer.transform.Translate(0, -.05f, 0);
-                }
-            }
-        }
-    }
-
+    int talktime;
     void talk(int time, bool whispering)
     {
         if (!whispering)

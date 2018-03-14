@@ -10,21 +10,24 @@ public class LevelTwo : MonoBehaviour {
     private bool iswhispering;
     private int talktime;
     private int sinktimer;
+    private int initialtimer;
 
 	// Use this for initialization
 	void Start () {
+        initialtimer = 2500;
         unblocked = false;
         talktime = 0;
         sinktimer = 0;
         GameObject.Find("Bile").GetComponent<Renderer>().enabled = false;
         // for testing
-
+        GameObject.Find("Voice 013").GetComponent<AudioSource>().Play();
         talk(1000, false);
 	}
 
     public void unblock()
     {
         GameObject.Find("Bile").GetComponent<Renderer>().enabled = true;
+        GameObject.Find("Voice 015").GetComponent<AudioSource>().Play();
         unblocked = true;
     }
 
@@ -51,6 +54,14 @@ public class LevelTwo : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (initialtimer > 0)
+        {
+            initialtimer--;
+            if (initialtimer == 0)
+            {
+                GameObject.Find("Voice 014").GetComponent<AudioSource>().Play();
+            }
+        }
 		if (talktime > 0)
         {
             talktime--;
@@ -62,7 +73,7 @@ public class LevelTwo : MonoBehaviour {
         }
         if (unblocked)
         {
-            if (sinktimer < 5000)
+            if (sinktimer < 500)
             {
                 sinktimer++;
                 Renderer[] lChildRenderers = GameObject.Find("FatSurface").GetComponentsInChildren<Renderer>();
