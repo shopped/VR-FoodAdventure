@@ -661,6 +661,7 @@
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\SphereBasedTagalong.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\StabilizationPlaneModifier.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\Tagalong.cs" />
+    <Compile Include="Assets\HoloToolkit\Utilities\Scripts\TapResponder.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\TextToSpeech.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\Timer.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\TimerScheduler.cs" />
@@ -748,6 +749,7 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
     <Compile Include="Assets\InversionScript.cs" />
     <Compile Include="Assets\LevelOne.cs" />
+    <Compile Include="Assets\nextscene.cs" />
     <Compile Include="Assets\Scripts\BaseGrabbable.cs" />
     <Compile Include="Assets\Scripts\BaseGrabber.cs" />
     <Compile Include="Assets\Scripts\BaseScalable.cs" />

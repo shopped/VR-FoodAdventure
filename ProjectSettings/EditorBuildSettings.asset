@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/helloworld.unity
     guid: 354943377ab3cad4893ad33e4c971cac
+  - enabled: 1
+    path: Assets/level1-mouth.unity
+    guid: 885668a62de4e2d4e83fcf5193c390c6

@@ -10,27 +10,21 @@ public class CheckY : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         lastY = 2.5;
+        delta = 0;
         chewing = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (delta < 2)
-        {
-            delta += Math.Abs(transform.position.y - lastY);
-        }
-        if (delta > 1)
+        delta = (transform.position.y - lastY);
+        lastY = this.transform.position.y;
+        if (delta * 10 > 1 || delta * 10 < -1)
         {
             chewing = true;
-        } else
+        }
+        else
         {
             chewing = false;
         }
-        lastY = transform.position.y;
-        if (delta > 0)
-        {
-            delta -= .2;
-        }
-        //Debug.Log("delta");
     }
 }
