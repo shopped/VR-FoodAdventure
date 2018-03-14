@@ -23,7 +23,7 @@ public class LevelOne : MonoBehaviour {
         GameObject.Find("watersm").GetComponent<Renderer>().enabled = false;
         GameObject.Find("watersm2").GetComponent<Renderer>().enabled = false;
         GameObject.Find("watersm3").GetComponent<Renderer>().enabled = false;
-        //GameObject.Find("Saliva").GetComponent<Renderer>().enabled = false;
+        GameObject.Find("Saliva").GetComponent<Renderer>().enabled = false;
     }
 	
 	// Update is called once per frame
@@ -64,7 +64,7 @@ public class LevelOne : MonoBehaviour {
             }
         } else
         {
-            //GameObject.Find("Saliva").GetComponent<Renderer>().enabled = false;
+            GameObject.Find("Saliva").GetComponent<Renderer>().enabled = false;
         }
         // Next Level Logic
         if (Player.position.z < -4 && count == 4)
