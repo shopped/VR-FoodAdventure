@@ -288,7 +288,9 @@
     <Compile Include="Assets\BackandforthScript.cs" />
     <Compile Include="Assets\BileResponder.cs" />
     <Compile Include="Assets\Bobbing.cs" />
+    <Compile Include="Assets\Changer.cs" />
     <Compile Include="Assets\CheckY.cs" />
+    <Compile Include="Assets\dontdestroy.cs" />
     <Compile Include="Assets\FlipNormals.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\BoundaryManager.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\SceneContentAdjuster.cs" />
@@ -751,6 +753,7 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
     <Compile Include="Assets\IntestineResponder.cs" />
     <Compile Include="Assets\InversionScript.cs" />
+    <Compile Include="Assets\LevelManager.cs" />
     <Compile Include="Assets\LevelOne.cs" />
     <Compile Include="Assets\LevelThree.cs" />
     <Compile Include="Assets\LevelTwo.cs" />
