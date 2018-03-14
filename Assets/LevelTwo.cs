@@ -9,15 +9,22 @@ public class LevelTwo : MonoBehaviour {
     private bool istalking;
     private bool iswhispering;
     private int talktime;
+    private int sinktimer;
 
 	// Use this for initialization
 	void Start () {
         unblocked = false;
         talktime = 0;
+        sinktimer = 0;
+        GameObject.Find("Bile").GetComponent<Renderer>().enabled = false;
+        // for testing
+
+        talk(1000, false);
 	}
 
     public void unblock()
     {
+        GameObject.Find("Bile").GetComponent<Renderer>().enabled = true;
         unblocked = true;
     }
 
@@ -25,7 +32,7 @@ public class LevelTwo : MonoBehaviour {
     {
         if (unblocked == true)
         {
-            StartCoroutine(LoadYourAsyncScene())
+            StartCoroutine(LoadYourAsyncScene());
         }
     }
 
@@ -53,11 +60,23 @@ public class LevelTwo : MonoBehaviour {
                 GameObject.Find("whispering").GetComponent<Renderer>().enabled = false;
             }
         }
+        if (unblocked)
+        {
+            if (sinktimer < 5000)
+            {
+                sinktimer++;
+                Renderer[] lChildRenderers = GameObject.Find("FatSurface").GetComponentsInChildren<Renderer>();
+                foreach (Renderer lRenderer in lChildRenderers)
+                {
+                    lRenderer.transform.Translate(0, -.05f, 0);
+                }
+            }
+        }
 	}
 
     void talk(int time, bool whispering)
     {
-        if (whispering)
+        if (!whispering)
         {
             GameObject.Find("talking").GetComponent<Renderer>().enabled = true;
             GameObject.Find("whispering").GetComponent<Renderer>().enabled = false;
