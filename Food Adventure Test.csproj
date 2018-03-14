@@ -757,6 +757,7 @@
     <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\NewBehaviourScript1.cs" />
     <Compile Include="Assets\nextscene.cs" />
+    <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\SaveOnLoad.cs" />
     <Compile Include="Assets\Scripts\BaseGrabbable.cs" />
     <Compile Include="Assets\Scripts\BaseGrabber.cs" />
@@ -782,6 +783,7 @@
     <Compile Include="Assets\Scripts\ThrowableObject.cs" />
     <Compile Include="Assets\Scripts\UsableObject.cs" />
     <Compile Include="Assets\Scripts\UseStateEnum.cs" />
+    <Compile Include="Assets\WaterGrab.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Common\Shaders\FastConfigurable\Shaders\FastConfigurable.cginc" />
