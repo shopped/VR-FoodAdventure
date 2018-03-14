@@ -7,8 +7,10 @@ public class Bobbing : MonoBehaviour
 {
     // Use this for initialization
     double timer;
+    public bool moving;
     void Start()
     {
+        moving = false;
         timer = 0;
     }
 
@@ -19,5 +21,9 @@ public class Bobbing : MonoBehaviour
         //Debug.Log(Time.deltaTime);
         float delta = (float)(.008 * (float)Math.Sin(timer));
         transform.Translate(0, delta, 0);
+        if (moving == true)
+        {
+            transform.Translate(0, 0, .1f);
+        }
     }
 }

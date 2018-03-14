@@ -15,11 +15,11 @@ public class CheckY : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (delta < 5)
+        if (delta < 2)
         {
             delta += Math.Abs(transform.position.y - lastY);
         }
-        if (delta > 3)
+        if (delta > 1)
         {
             chewing = true;
         } else
@@ -29,7 +29,8 @@ public class CheckY : MonoBehaviour {
         lastY = transform.position.y;
         if (delta > 0)
         {
-            delta -= .1;
+            delta -= .2;
         }
+        //Debug.Log("delta");
     }
 }

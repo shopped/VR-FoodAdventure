@@ -10,19 +10,22 @@ public class BackandforthScript : MonoBehaviour {
     void Start () {
         timer = 0;
         close = false;
+        transform.Translate(0, 3, -5);
 	}
     
 	// Update is called once per frame
 	void Update () {
         timer = timer + .01;
         float z = (float)(Math.Sin(timer));
-        if (z < -.8)
+        transform.Translate(0, 0, z);
+        if (transform.position.z < 40)
         {
             close = true;
-        } else
+        }
+        else
         {
             close = false;
         }
-        transform.Translate(0, 0.001f, z);
+        // Debug.Log(close);
 	}
 }
