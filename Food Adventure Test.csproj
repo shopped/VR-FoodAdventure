@@ -285,6 +285,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BackandforthScript.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\BoundaryManager.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\SceneContentAdjuster.cs" />
     <Compile Include="Assets\HoloToolkit\Common\Scripts\CameraCache.cs" />
@@ -743,6 +744,31 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UICollection.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityScaler.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
+    <Compile Include="Assets\InversionScript.cs" />
+    <Compile Include="Assets\Scripts\BaseGrabbable.cs" />
+    <Compile Include="Assets\Scripts\BaseGrabber.cs" />
+    <Compile Include="Assets\Scripts\BaseScalable.cs" />
+    <Compile Include="Assets\Scripts\BaseThrowable.cs" />
+    <Compile Include="Assets\Scripts\BaseUsable.cs" />
+    <Compile Include="Assets\Scripts\ControllerReleaseData.cs" />
+    <Compile Include="Assets\Scripts\DuplicateAfterThrow.cs" />
+    <Compile Include="Assets\Scripts\ExtensionMethod.cs" />
+    <Compile Include="Assets\Scripts\GrabbableChild.cs" />
+    <Compile Include="Assets\Scripts\GrabbableColor.cs" />
+    <Compile Include="Assets\Scripts\GrabbableFixedJoint.cs" />
+    <Compile Include="Assets\Scripts\GrabbableMultiJoint.cs" />
+    <Compile Include="Assets\Scripts\GrabbableSimple.cs" />
+    <Compile Include="Assets\Scripts\GrabbableSnapToOrient.cs" />
+    <Compile Include="Assets\Scripts\GrabbableSpringJoint.cs" />
+    <Compile Include="Assets\Scripts\GrabbableTrackFollow.cs" />
+    <Compile Include="Assets\Scripts\Grabber.cs" />
+    <Compile Include="Assets\Scripts\GrabStateEnum.cs" />
+    <Compile Include="Assets\Scripts\GrabStyleEnum.cs" />
+    <Compile Include="Assets\Scripts\RotatableObject.cs" />
+    <Compile Include="Assets\Scripts\ScalableObject.cs" />
+    <Compile Include="Assets\Scripts\ThrowableObject.cs" />
+    <Compile Include="Assets\Scripts\UsableObject.cs" />
+    <Compile Include="Assets\Scripts\UseStateEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Common\Shaders\FastConfigurable\Shaders\FastConfigurable.cginc" />
