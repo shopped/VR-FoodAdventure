@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 33483770986215250}
   - component: {fileID: 23301871291081668}
   - component: {fileID: 65697507411379364}
-  - component: {fileID: 114464717112057926}
   - component: {fileID: 54930251578342746}
+  - component: {fileID: 114464717112057926}
+  - component: {fileID: 114346257689537622}
   m_Layer: 0
   m_Name: WaterLeft
   m_TagString: Untagged
@@ -112,6 +113,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114346257689537622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190124027716694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b28d4c5e55448746bfb3379b5741ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabAttachSpot: {fileID: 0}
+  strength: 1
+  handedness: 0
+  grabbableLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  pressType: 0
 --- !u!114 &114464717112057926
 MonoBehaviour:
   m_ObjectHideFlags: 1

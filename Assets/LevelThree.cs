@@ -106,6 +106,8 @@ public class LevelThree : MonoBehaviour {
             int y = rnd.Next(0, 2);
             theText.transform.Translate(x, .5f + y, 10);
             var textMesh = theText.AddComponent<TextMesh>() as TextMesh;
+            var collider = theText.AddComponent<BoxCollider>() as BoxCollider;
+            theText.AddComponent<WaterGrab>();
             textMesh.text = nutrient_list[index];
             current_nutrients.Add(theText);
             index++;

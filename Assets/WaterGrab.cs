@@ -13,6 +13,7 @@ public class WaterGrab : MonoBehaviour {
     {
         Debug.Log("Hi!");
         //GameObject.Find("Level 3").GetComponent<LevelThree>().touch(col.gameObject.name, true);
+        Destroy(this);
     }
 
     // Update is called once per frame
