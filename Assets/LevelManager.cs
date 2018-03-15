@@ -38,6 +38,7 @@ namespace HoloToolkit.Unity.InputModule
 
         public void OnInputClicked(InputClickedEventData eventData)
         {
+            Destroy(GameObject.Find("MixedRealityCameraParent"));
             level++;
             if (level == 4)
                 level = 0;
