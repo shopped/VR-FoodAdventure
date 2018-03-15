@@ -763,6 +763,7 @@
     <Compile Include="Assets\nextscene.cs" />
     <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\SaveOnLoad.cs" />
+    <Compile Include="Assets\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\BaseGrabbable.cs" />
     <Compile Include="Assets\Scripts\BaseGrabber.cs" />
     <Compile Include="Assets\Scripts\BaseScalable.cs" />
