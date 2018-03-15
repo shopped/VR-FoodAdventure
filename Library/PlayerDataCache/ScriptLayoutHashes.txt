@@ -345,3 +345,4 @@ ecc14250990e8ffd4a0bb635da7c50c3 Assembly-CSharp.dll:HoloToolkit.Unity.AtlasPref
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Delay
 aa573da5178a98cdf7ef39d22614bb9b Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.CompoundButton
 9a0abb9f7109ec47e2c7bfd5d401ded8 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.Examples.Grabbables.GrabbableSimple
+2763f9319f4903ee7eba3d19287de822 Assembly-CSharp.dll:.SceneLoader

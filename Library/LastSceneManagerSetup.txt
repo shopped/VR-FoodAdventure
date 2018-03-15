@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/helloworld.unity
+- path: Assets/level2-stomach.unity
   isLoaded: 1
   isActive: 1
